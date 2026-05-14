@@ -1,0 +1,22 @@
+{
+  "name": "RecoCore Dev",
+
+  "dockerComposeFile": "../docker-compose.yml",
+
+  "service": "api",
+
+  "workspaceFolder": "/app",
+
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind"
+  ],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
+}
