@@ -8,7 +8,8 @@
   "workspaceFolder": "/app",
 
   "mounts": [
-    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind"
+    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind",
+    "source=${localEnv:HOME}/.codex,target=/root/.codex,type=bind"
   ],
 
   "customizations": {
@@ -16,7 +17,10 @@
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance"
-      ]
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
     }
   }
 }
