@@ -1,0 +1,1 @@
+from app.routes.interaction_routes import router
