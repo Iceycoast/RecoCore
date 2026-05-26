@@ -4,7 +4,8 @@ from app.db import engine
 from app.models import Item, User, Interaction
 from app.models.base import Base
 
-from app.routes import router as interaction_router
+from app.routes import interaction_router
+from app.routes import recommendation_router 
 
 
 app = FastAPI(
@@ -15,6 +16,7 @@ app = FastAPI(
 Base.metadata.create_all(bind=engine)
 
 app.include_router(interaction_router)
+app.include_router(recommendation_router)
 
 @app.get("/")
 def health_check():

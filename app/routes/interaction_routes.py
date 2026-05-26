@@ -7,12 +7,12 @@ from app.schemas import InteractionCreate, InteractionResponse
 
 from app.services import create_interaction
 
-router = APIRouter(
+interaction_router = APIRouter(
     prefix="/interactions",
     tags=["Interactions"]
 )
 
-@router.post(
+@interaction_router.post(
     "", 
     response_model=DataResponse[InteractionResponse], 
     status_code=status.HTTP_201_CREATED)

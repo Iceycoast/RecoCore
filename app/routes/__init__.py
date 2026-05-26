@@ -1,1 +1,2 @@
-from app.routes.interaction_routes import router
+from app.routes.interaction_routes import interaction_router
+from app.routes.recommendation_routes import recommendation_router
