@@ -17,9 +17,10 @@ recommendation_router = APIRouter(
 )
 def fetch_trending_recommendations(
     db: Session = Depends(get_db),
-    limit: int = 10
+    limit: int = 10,
+    category: str |None = None
 ):
-    trending_items = get_trending_recommendations(db=db, limit=limit)
+    trending_items = get_trending_recommendations(db=db, limit=limit, category=category)
     return DataResponse(
         success=True,
         message="Trending recommendations fetched successfully",

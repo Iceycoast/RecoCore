@@ -5,7 +5,7 @@ from app.models import Item
 from app.models import Interaction
 
 
-def get_trending_items(db: Session, limit: int = 10):
+def get_trending_items(db: Session, limit: int = 10, category: str | None = None):
 
     query = (
         select(
@@ -13,6 +13,16 @@ def get_trending_items(db: Session, limit: int = 10):
             func.sum(Interaction.weight).label("score")
         )
         .join(Interaction, Item.item_id == Interaction.item_id)
+    )
+
+    if category:
+        query = query.where(
+            Item.category == category
+        )
+    
+    
+    query = (
+        query
         .group_by(Item.item_id)
         .order_by(desc("score"))
         .limit(limit)   
