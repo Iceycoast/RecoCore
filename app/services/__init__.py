@@ -1,2 +1,2 @@
 from app.services.interaction_service import create_interaction
-from app.services.recommendation_service import get_trending_recommendations
+from app.services.recommendation_service import get_trending_recommendations, get_personalised_recommendations

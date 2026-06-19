@@ -1,3 +1,3 @@
 from app.schemas.interaction_schema import InteractionCreate, InteractionResponse
 from app.schemas.common_schema import MessageResponse, DataResponse
-from app.schemas.recommendation_schema import TrendingItemResponse
+from app.schemas.recommendation_schema import TrendingItemResponse, RecommendationResponse
