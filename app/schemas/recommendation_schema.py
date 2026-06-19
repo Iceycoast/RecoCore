@@ -5,4 +5,8 @@ class TrendingItemResponse(BaseModel):
     name: str
     category: str
     score: int
-    
+
+class RecommendationResponse(BaseModel):
+    item_id: int
+    name: str
+    category: str
