@@ -1,10 +1,16 @@
-from datetime import datetime, UTC
+from datetime import UTC, datetime
 
 from app.core.constants import DECAY_RULES
 
 def get_decay_multiplier(interaction_date: datetime) -> float:
 
-    age_days = (datetime.now(UTC) - interaction_date).days
+    now = (
+        datetime.now(UTC)
+        if interaction_date.tzinfo is not None
+        else datetime.now()
+    )
+
+    age_days = (now - interaction_date).days
 
     for max_age, multiplier in DECAY_RULES:
         if age_days <= max_age:
