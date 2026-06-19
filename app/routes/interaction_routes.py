@@ -27,7 +27,7 @@ def create_interaction_route(payload: InteractionCreate,
 
         return {
             "success": True,
-            "messasge": "Interaction created successfully",
+            "message": "Interaction created successfully",
             "data": interaction
         }
     
