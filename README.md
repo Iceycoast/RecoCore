@@ -11,6 +11,11 @@ RecoCore is a production-style ecommerce recommendation engine API built with Fa
 
 The project demonstrates backend engineering fundamentals through clean API design, SQLAlchemy ORM models, service-layer separation, and recommendation ranking logic implemented without machine learning.
 
+## Live Deployment
+
+- Live API: https://recocore-production.up.railway.app
+- API documentation: https://recocore-production.up.railway.app/docs
+
 ## Goals
 
 - Demonstrate backend engineering skills with a realistic API project.
